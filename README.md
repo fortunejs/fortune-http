@@ -17,10 +17,33 @@ Consult the [source code](https://github.com/fortunejs/fortune-http/tree/master/
 
 ```js
 const http = require('http')
-const createListener = require('fortune-http')
+const fortuneHTTP = require('fortune-http')
 
 // Pass in a Fortune instance and an optional options object.
-const server = http.createServer(createListener(fortune, options))
+const listener = fortuneHTTP.createListener(fortuneInstance, options)
+
+const server = http.createServer((request, response) =>
+  listener(request, response)
+  // Make sure to catch Promise rejections.
+  .catch(error => {
+    console.error(error.stack)
+  }))
+```
+
+For use with middleware frameworks such as Express:
+
+```js
+const express = require('express')
+const fortuneHTTP = require('fortune-http')
+
+const app = express()
+const listener = fortuneHTTP.createListener(fortuneInstance, options)
+
+// Make sure that the Fortune listener is last in the middleware stack,
+// since it ends the response by default (this can be optionally disabled).
+app.use((request, response) =>
+  listener(request, response)
+  .catch(error => { ... }))
 ```
 
 

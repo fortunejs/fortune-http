@@ -23,7 +23,13 @@ instance().then(store => {
   store.on(store.common.events.change, data => console.log(chalk.cyan(
     `${chalk.bold('Change')}: ${util.inspect(data, { depth: null })}`)))
 
-  const server = http.createServer(createListener(store))
+  const listener = createListener(store)
+  const server = http.createServer((request, response) =>
+    listener(request, response)
+    .catch(error => {
+      console.error(error.stack)
+    }))
+
   server.listen(port, () =>
     console.log(chalk.blue(`Listening on port ${port}...`)))
 })
