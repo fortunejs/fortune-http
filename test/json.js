@@ -19,7 +19,7 @@ run((assert, comment) => {
     assert(response.status === 200, 'status is correct')
     assert(~response.headers['content-type'].indexOf('application/json'),
       'content type is correct')
-    assert(deepEqual(response.body, { recordTypes: [ 'user', 'animal', '☯' ] }),
+    assert(deepEqual(Object.keys(response.body.recordTypes), [ 'user', 'animal', '☯' ]),
       'response body is correct')
   })
 })
