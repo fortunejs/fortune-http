@@ -13,7 +13,7 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 /* index */
 .index header { padding: 3em 0; background: #fff; border-bottom: 1px #ccc solid; margin-bottom: 3em; }
 .index header > div, .property-header, .property-list { max-width: 52em; margin: 0 auto; padding: 0 1.5em; }
-.index header > div > h1:first-of-type { font-family: inherit; font-style: inherit; font-weight: bold; font-size: 2em; margin-bottom: 0.75em; line-height: inherit; }
+.index header > div > h1:first-of-type { font-family: inherit; font-style: inherit; font-weight: bold; font-size: 2em; margin-bottom: 0.75em; line-height: inherit; border-bottom: 3px #444 solid; padding-bottom: 0.375em; }
 .index .description { font-weight: normal; margin: 3em 0 1.5em; }
 .index .description > * { margin-bottom: 1.5em; }
 .index .description > *:last-child { margin-bottom: 0; }
@@ -21,8 +21,8 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 /* record types */
 .types-list { list-style-type: none; margin: -0.75em 0; }
 .types-list li { display: inline-block; text-transform: capitalize; }
-.types-list li a { display: block; color: #31BAE8; font-weight: bold; border-radius: 0.25em; border: 1px #ddd solid; padding: 0.375em 1.125em; margin: 0.75em 0.75em 0.75em 0; transition: border-color 0.2s ease; }
-.types-list li a:hover { border-color: #31BAE8; }
+.types-list li a { display: block; color: #31BAE8; font-weight: bold; border-radius: 0.25em; border: 1px #31BAE8 solid; padding: 0.375em 1.125em; margin: 0.75em 0.75em 0.75em 0; transition: background 0.2s ease, color 0.2s ease; }
+.types-list li a:hover { background: #31BAE8; color: #fff; }
 .types-list .comment { display: none; }
 
 /* property list */

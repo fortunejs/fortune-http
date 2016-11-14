@@ -47,6 +47,15 @@ app.use((request, response) =>
 ```
 
 
+## Demo
+
+By installing the development dependencies, one can run the test instance locally:
+
+```
+$ npm i && npm run demo
+```
+
+
 ## License
 
 This software is licensed under the [MIT license](https://raw.githubusercontent.com/fortunejs/fortune-http/master/LICENSE).
