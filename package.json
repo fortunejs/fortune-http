@@ -1,13 +1,14 @@
 {
   "name": "fortune-http",
   "description": "HTTP implementation for Fortune.js.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:fortunejs/fortune-http.git"
   },
   "scripts": {
+    "demo": "node test/demo",
     "lint": "eslint lib",
     "postpublish": "npm run tag",
     "tag": "git tag `npm v fortune-http version` && git push origin --tags",
@@ -24,6 +25,7 @@
     "eslint-config-boss": "^1.0.5",
     "form-data": "^2.1.2",
     "fortune": "5.0.2",
+    "lorem-ipsum": "^1.0.3",
     "tapdance": "^5.0.2"
   },
   "main": "lib/index.js",

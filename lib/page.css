@@ -8,6 +8,7 @@ body { line-height: 1.5; background: #eee; color: #444; }
 a { color: inherit; text-decoration: inherit; }
 h1, h2, h3, h4, h5, h6, aside > label { font-family: 'Garamond', 'Times New Roman', Times, serif; }
 h1, h2, h3, h4, h5, h6 { font-size: 1.25em; line-height: 1.2; font-weight: normal; font-style: italic; }
+input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
 /* index */
 .index header { padding: 3em 0; background: #fff; border-bottom: 1px #ccc solid; margin-bottom: 3em; }
@@ -72,7 +73,7 @@ aside > label > span:last-of-type { position: absolute; left: -0.15em; bottom: -
 
 /* collection */
 main { min-height: 100%; position: relative; left: 0; padding: 3.75em 1.5em 1.5em; transition: padding-left 0.2s ease, left 0.2s ease; }
-main > header { color: #888; padding: 1.125em 3em 1.125em 1.5em; background: #fff; border-bottom: 1px #ccc solid; position: fixed; z-index: 100; top: 0; left: 1.5em; width: calc(100% - 1.5em); transition: left 0.2s ease, width 0.2s ease; }
+main > header { color: #888; padding: 1.125em 3em 1.125em 1.5em; background: #fff; border-bottom: 1px #ccc solid; position: fixed; z-index: 500; top: 0; left: 1.5em; width: calc(100% - 1.5em); transition: left 0.2s ease, width 0.2s ease; }
 main > header a { color: #31BAE8; }
 main > header a.type { text-transform: capitalize; }
 main > header > .button { float: right; margin-left: 1.5em; }
@@ -114,7 +115,7 @@ main > header > .button { float: right; margin-left: 1.5em; }
 .button .icon { margin-right: 0.375em; }
 
 /* modal */
-.modal { text-align: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(41, 64, 71, 0.925); pointer-events: none; opacity: 0; transform: scale(1.25); transition: opacity 0.2s ease, transform 0.3s ease; overflow: auto; line-height: 100%; z-index: 200; }
+.modal { text-align: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(41, 64, 71, 0.925); pointer-events: none; opacity: 0; transform: scale(1.25); transition: opacity 0.2s ease, transform 0.3s ease; overflow: auto; line-height: 100%; z-index: 500; }
 .modal .container { display: inline-block; max-width: 48em; width: 100%; vertical-align: middle; padding: 6em 1.5em; }
 .modal::before { content: ''; display: inline-block; vertical-align: middle; height: 100%; }
 .modal h2 { color: #fff; padding: 0.6em 1.2em; background: rgba(255, 255, 255, 0.1); border-radius: 0.25em; margin-bottom: 0.6em; display: inline-block; }
