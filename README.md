@@ -20,7 +20,7 @@ const http = require('http')
 const fortuneHTTP = require('fortune-http')
 
 // Pass in a Fortune instance and an optional options object.
-const listener = fortuneHTTP.createListener(fortuneInstance, options)
+const listener = fortuneHTTP(fortuneInstance, options)
 
 const server = http.createServer((request, response) =>
   listener(request, response)
@@ -37,7 +37,7 @@ const express = require('express')
 const fortuneHTTP = require('fortune-http')
 
 const app = express()
-const listener = fortuneHTTP.createListener(fortuneInstance, options)
+const listener = fortuneHTTP(fortuneInstance, options)
 
 // Make sure that the Fortune listener is last in the middleware stack,
 // since it ends the response by default (this can be optionally disabled).
