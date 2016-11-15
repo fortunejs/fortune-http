@@ -12,9 +12,9 @@ input:focus, select:focus, textarea:focus, button:focus { outline: none; }
 
 /* index */
 .index header { padding: 3em 0; background: #fff; border-bottom: 1px #ccc solid; margin-bottom: 3em; }
-.index header > div, .property-header, .property-list { max-width: 52em; margin: 0 auto; padding: 0 1.5em; }
+.index header > div, .property-header, .property-list, .index .description { max-width: 52em; margin: 0 auto; padding: 0 1.5em; }
 .index header > div > h1:first-of-type { font-family: inherit; font-style: inherit; font-weight: bold; font-size: 2em; margin-bottom: 0.75em; line-height: inherit; border-bottom: 3px #444 solid; padding-bottom: 0.375em; }
-.index .description { font-weight: normal; margin: 3em 0 1.5em; }
+.index .description { font-weight: normal; margin: 3em auto 4.5em; }
 .index .description > * { margin-bottom: 1.5em; }
 .index .description > *:last-child { margin-bottom: 0; }
 
