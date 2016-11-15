@@ -90,7 +90,7 @@ main > header > .button { float: right; margin-left: 1.5em; }
 .group tr:first-of-type th:last-of-type { color: #888; font-weight: normal; }
 .group td:last-of-type, .group th:last-of-type { text-align: right; }
 .group tr:last-of-type td { border-bottom: none; }
-.group tr:nth-of-type(2n) td { background: #f2f2f2; }
+.group tr:nth-of-type(2n) td { background: #f5f5f5; }
 .group tr:nth-of-type(2n + 1) td { background: #eee; }
 .group td, .group th { color: #bbb; padding: 1.125em 1.5em; border-right: 1px #ddd solid; border-bottom: 1px #ddd solid; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; max-width: 20em; }
 .group th { color: inherit; border-right: 1px #ddd solid; border-bottom: 1px #ccc solid; text-align: left; }
@@ -101,6 +101,8 @@ main > header > .button { float: right; margin-left: 1.5em; }
 .group form:last-of-type { margin-right: 0; }
 .group label, .group time { color: #888; }
 .group .boolean { margin-right: 0.5em; pointer-events: none; font-weight: bold; color: #888; }
+.group .boolean.true { color: #81c14f; }
+.group .boolean.false { color: #D9603F; }
 .group a, .group a .value { color: #31BAE8; }
 .group a:hover { text-decoration: underline; }
 
