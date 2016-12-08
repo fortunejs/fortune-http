@@ -4,7 +4,7 @@
 [![npm Version](https://img.shields.io/npm/v/fortune-http.svg?style=flat-square)](https://www.npmjs.com/package/fortune-http)
 [![License](https://img.shields.io/npm/l/fortune-http.svg?style=flat-square)](https://raw.githubusercontent.com/fortunejs/fortune-http/master/LICENSE)
 
-This is a HTTP implementation for Fortune.js, which includes default serializers for JSON, HTML, form encoded and form data.
+This is a HTTP implementation for Fortune.js, which includes default serializers for JSON, HTML, form encoded and form data. **This module is required for other HTTP serializers.**.
 
 ```sh
 $ npm install fortune-http --save
