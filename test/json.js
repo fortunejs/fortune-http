@@ -176,6 +176,7 @@ run((assert, comment) => {
     method: 'delete'
   }, response => {
     assert(response.status === 204, 'status is correct')
+    assert(response.body.length === 0, 'body is empty')
   })
 })
 

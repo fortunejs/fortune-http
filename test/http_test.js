@@ -1,5 +1,6 @@
 'use strict'
 
+const uws = require('uws')
 const http = require('http')
 const chalk = require('chalk')
 
@@ -29,6 +30,7 @@ module.exports = function httpTest (options, path, request, fn, change) {
 
     const listener = createListener(store, options)
 
+    // TODO: use uws.http
     server = http.createServer((request, response) => {
       listener(request, response)
       .catch(error => stderr.error(error))
@@ -59,7 +61,9 @@ module.exports = function httpTest (options, path, request, fn, change) {
       }).end(request ? request.body : null))
 
     .then(response => {
-      server.close()
+      // uws server seems to be temporal.
+      if (server) server.close()
+
       stderr.debug(chalk.bold('Response status: ' + status))
       stderr.debug(headers)
       return store.disconnect().then(() => response.toString())
