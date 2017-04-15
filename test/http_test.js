@@ -44,9 +44,11 @@ module.exports = function httpTest (options, path, request, fn, change) {
       if (!request.headers) request.headers = {}
       if (typeof request.body === 'object') {
         request.body = JSON.stringify(request.body)
-        request.headers['Content-Length'] = Buffer.byteLength(request.body)
+        request.headers['content-length'] = Buffer.byteLength(request.body)
       }
     }
+    else request = { headers: {} }
+    request.headers['connection'] = 'keep-alive'
 
     return new Promise((resolve, reject) =>
       http.request(Object.assign({ port, path }, request), response => {
