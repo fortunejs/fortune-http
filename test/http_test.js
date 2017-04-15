@@ -30,8 +30,7 @@ module.exports = function httpTest (options, path, request, fn, change) {
 
     const listener = createListener(store, options)
 
-    // TODO: use uws.http
-    server = http.createServer((request, response) => {
+    server = /* uws. */ http.createServer((request, response) => {
       listener(request, response)
       .catch(error => stderr.error(error))
     })
@@ -41,6 +40,7 @@ module.exports = function httpTest (options, path, request, fn, change) {
     let status
 
     if (request) {
+      if ('method' in request) request.method = request.method.toUpperCase()
       if (!request.headers) request.headers = {}
       if (typeof request.body === 'object') {
         request.body = JSON.stringify(request.body)
