@@ -185,6 +185,7 @@ run((assert, comment) => {
   comment('respond to options: index')
   return test('/', { method: 'options' }, response => {
     assert(response.status === 204, 'status is correct')
+    assert(response.body.length === 0, 'body is empty')
     assert(response.headers['allow'] === 'GET',
       'allow header is correct')
   })
