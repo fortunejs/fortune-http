@@ -1,7 +1,7 @@
 {
   "name": "fortune-http",
   "description": "HTTP implementation for Fortune.js.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "eslint": "^3.19.0",
     "eslint-config-boss": "^1.0.5",
     "form-data": "^2.1.4",
-    "fortune": "fortunejs/fortune",
+    "fortune": "^5.1.0",
     "lorem-ipsum": "^1.0.3",
     "tapdance": "^5.0.4",
     "uws": "^0.14.1"
