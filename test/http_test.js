@@ -68,20 +68,21 @@ module.exports = function httpTest (options, path, request, fn, change) {
 
       stderr.debug(chalk.bold('Response status: ' + status))
       stderr.debug(headers)
-      return store.disconnect().then(() => response.toString())
+      return store.disconnect().then(() => response)
     })
 
-    .then(text => {
-      try {
-        if (text.length) text = JSON.parse(text)
-        stderr.log(text)
-      }
-      catch (error) {
-        // If it couldn't be parsed as JSON, not a problem.
-        stderr.warn(text)
-      }
+    .then(body => {
+      if (body.length)
+        try {
+          body = JSON.parse(body.toString())
+          stderr.log(body)
+        }
+        catch (error) {
+          // If it couldn't be parsed as JSON, not a problem.
+          stderr.warn(body)
+        }
 
-      return fn({ status, headers, body: text })
+      return fn({ status, headers, body })
     })
   })
 
