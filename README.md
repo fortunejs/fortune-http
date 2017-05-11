@@ -16,7 +16,12 @@ $ npm install fortune-http --save
 Consult the [source code](https://github.com/fortunejs/fortune-http/tree/master/lib) or the [documentation website](http://fortune.js.org/api) for more information.
 
 ```js
+// Use the Node.js core HTTP implementation.
 const http = require('http')
+
+// The alternative `uWS.http` implementation may be supported:
+// const http = require('uws').http
+
 const fortuneHTTP = require('fortune-http')
 
 // Pass in a Fortune instance and an optional options object.
