@@ -1,6 +1,14 @@
 'use strict'
 
-// const uws = require('uws')
+let uws
+
+try {
+  uws = require('uws')
+}
+catch (error) {
+  // Ignore error.
+}
+
 const http = require('http')
 const chalk = require('chalk')
 
@@ -30,7 +38,8 @@ module.exports = function httpTest (options, path, request, fn, change) {
 
     const listener = createListener(store, options)
 
-    server = /* uws. */ http.createServer((request, response) => {
+    server = (options && options.uws ? uws.http : http)
+    .createServer((request, response) => {
       listener(request, response)
       .catch(error => stderr.error(error))
     })
