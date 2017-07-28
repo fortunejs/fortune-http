@@ -1,0 +1,189 @@
+<div class="container">
+  <input id="toggle-aside" type="checkbox">
+
+  <aside>
+    <label for="toggle-aside"></label>
+    <header>
+      <div class="logo"></div>
+      <h2 class="side-title"><a></a></h2>
+    </header>
+    <div class="content">
+      <div class="record-type">
+        <a class="type-header"></a>
+        <a class="field"></a>
+      </div>
+      <form class="side-query">
+        <input type="hidden" class="hidden-query">
+        <div class="query-group">
+          <h3 class="query-header"></h3>
+          <label class="input-group">
+            <h5 class="input-title"></h5>
+            <input class="input-field">
+          </label>
+        </div>
+        <input id="submit-query" type="submit">
+        <label class="submit" for="submit-query"></label>
+      </form>
+    </div>
+  </aside>
+
+  <header class="top">
+    <p class="breadcrumbs">
+      <a class="breadcrumb"></a>
+    </p>
+    <div class="token-status"></div>
+  </header>
+
+  <div class="documentation">
+    <header class="page">
+      <h1 class="title"></h1>
+    </header>
+    <div class="media-types">
+      <h3 class="media-types-title"></h3>
+      <span class="media-type"></span>
+    </div>
+    <div class="table-wrapper">
+      <div class="definitions">
+        <header>
+          <div>◇</div>
+          <div><h4 class="name-title"></h4></div>
+          <div><h4 class="type-title"></h4></div>
+          <div><h4 class="description-title"></h4></div>
+        </header>
+        <div class="definition">
+          <div>
+            <a>◆</a>
+          </div>
+          <div>
+            <a class="definition-link"></a>
+            <h5 class="definition-name"></h5>
+          </div>
+          <div>
+            <span class="tag"></span>
+          </div>
+          <div>
+            <p class="definition-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="records-container">
+    <header class="page">
+      <h1>
+        <a class="title"></a>
+        <span class="tagline"></span>
+        <label for="toggle-create" class="label-create"></label>
+      </h1>
+      <input type="checkbox" class="toggle-create" id="toggle-create">
+      <label for="toggle-create" class="overlay create"></label>
+      <form class="record-form create" method="POST">
+        <input type="hidden" class="method" name="__method__">
+        <input type="hidden" class="update-id" name="id">
+        <input type="hidden" class="csrf">
+        <div class="inputs">
+          <label class="input-group">
+            <h5 class="input-title"></h5>
+            <input type="text">
+            <div class="radio-group">
+              <label class="true">
+                <input type="radio" value="true">
+                <span></span>
+              </label>
+              <label class="false">
+                <input type="radio" value="false">
+                <span></span>
+              </label>
+              <label class="null">
+                <input type="radio" value="">
+                <span></span>
+              </label>
+            </div>
+            <textarea></textarea>
+          </label>
+        </div>
+        <div>
+          <label class="submit-label">
+            <input type="submit">
+            <span></span>
+          </label>
+        </div>
+      </form>
+    </header>
+    <div class="table-wrapper">
+      <div class="records">
+        <div class="error-message"></div>
+        <div class="empty-message"></div>
+        <header>
+          <div>
+            <h4><span>×</span></h4>
+          </div>
+          <div class="column">
+            <h4></h4>
+            <a></a>
+          </div>
+          <div>
+            <h4><span>⋮</span></h4>
+          </div>
+        </header>
+        <div class="message">
+          <span></span>
+        </div>
+        <div class="row">
+          <div>
+            <form class="delete-record" method="POST">
+              <input type="hidden" name="__method__" value="delete">
+              <input type="hidden" class="csrf">
+              <label>
+                <input type="submit">
+                <span>×</span>
+              </label>
+            </form>
+          </div>
+          <div class="value">
+            <span></span>
+            <a></a>
+          </div>
+          <div>
+            <input type="checkbox" class="toggle-update">
+            <label class="label-update"></label>
+            <label class="overlay update"></label>
+            <form class="record-form update" method="POST">
+              <input type="hidden" class="method" name="__method__">
+              <input type="hidden" class="update-id" name="id">
+              <input type="hidden" class="csrf">
+              <div class="inputs">
+                <label class="input-group">
+                  <h5 class="input-title"></h5>
+                  <input type="text">
+                  <div class="radio-group">
+                    <label class="true">
+                      <input type="radio" value="true">
+                      <span></span>
+                    </label>
+                    <label class="false">
+                      <input type="radio" value="false">
+                      <span></span>
+                    </label>
+                    <label class="null">
+                      <input type="radio" value="">
+                      <span></span>
+                    </label>
+                  </div>
+                  <textarea></textarea>
+                </label>
+              </div>
+              <div>
+                <label class="submit-label">
+                  <input type="submit">
+                  <span></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,7 @@ const form = require('../lib/form_serializer')
 const formUrlEncoded = form.formUrlEncoded
 const formData = form.formData
 
+const methodKey = '__method__'
 const buffer = Buffer.from || Buffer
 const options = {
   serializers: [
@@ -41,7 +42,7 @@ run((assert, comment) => {
     method: 'post',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: qs.stringify({
-      method: 'find',
+      [methodKey]: 'find',
       'match.name': 'Babby'
     })
   }, response => {
@@ -81,7 +82,7 @@ run((assert, comment) => {
       'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: qs.stringify({
-      method: 'update',
+      [methodKey]: 'update',
       id: 1,
       name: 'Ayy lmao',
       nicknames: [ 'ayy', 'lmao' ]
@@ -145,7 +146,7 @@ run((assert, comment) => {
   let store
   const deadbeef = buffer('deadbeef', 'hex')
   const form = new FormData()
-  form.append('method', 'update')
+  form.append(methodKey, 'update')
   form.append('id', 1)
   form.append('name', 'Ayy lmao')
   form.append('picture', deadbeef,

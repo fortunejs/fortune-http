@@ -10,6 +10,8 @@ This is a HTTP implementation for Fortune.js, which includes default serializers
 $ npm install fortune-http --save
 ```
 
+![Screenshot](https://raw.githubusercontent.com/fortunejs/fortune-http/master/screenshot.png)
+
 
 ## Usage
 
@@ -50,6 +52,20 @@ app.use((request, response) =>
   listener(request, response)
   .catch(error => { ... }))
 ```
+
+
+## Customization
+
+The HTML serializer has some customization options.
+
+- `injectHTML`: passing this option as a String to the HTML serializer will include it in the response.
+- `inputOnly`: on a record field definition, setting this property to true will mark it as an input only field. Combined with making the field non-enumerable, virtual inputs can be defined.
+- `outputOnly`: on a record field definition, setting this property to true will hide it from input.
+
+The form serializers interpret a few special fields.
+
+- All payloads must include cookie values, prefixed with `CSRF_` to prevent Cross-Site Request Forgery attacks.
+- The special field `__method__` may be used to override the method, which may be valued by any method that Fortune.js accepts.
 
 
 ## Demo
