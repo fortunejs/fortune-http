@@ -95,7 +95,7 @@ aside form .submit { font-size: calc(1em * 7 / 8); border-radius: 4px; padding: 
 .definition-name, .definition-link { font-size: calc(1em * 7 / 8); }
 .definition-name { font-weight: inherit; }
 .definition-link { font-weight: bold; text-transform: capitalize; }
-.definition > div, .row > div, .definitions header > div, .records header > div { padding: calc(1.5em / 2); padding-bottom: calc(1.5em / 2 - 1px); display: table-cell; border-bottom: 1px transparent solid; position: relative; }
+.definition > div, .row > div, .definitions header > div, .records header > div { padding: calc(1.5em / 2); padding-bottom: calc(1.5em / 2 - 1px); display: table-cell; border-bottom: 1px transparent solid; }
 .definition > div:nth-of-type(1), .definitions header > div:nth-of-type(1), .row > div:nth-of-type(1), .records header > div:nth-of-type(1) { width: calc(1.5em * 3 / 2); padding-right: 0; }
 .definition > div:nth-of-type(2), .definitions header > div:nth-of-type(2) { width: calc(1.5em * 8); }
 .definition > div:nth-of-type(3), .definitions header > div:nth-of-type(3) { width: calc(1.5em * 8); }
@@ -175,10 +175,21 @@ aside form .submit, .submit-label, label[class^="label-"] { user-select: none; }
 
 /* responsive */
 @media (max-width: 640px) {
-#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(1.5em * 9); }
+#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(100% - 1.5em * 2); }
 #toggle-aside:checked ~ aside, #toggle-aside:not(:checked) ~ *:not(aside) { margin-left: 0; }
-#toggle-aside:not(:checked) ~ aside { margin-left: calc(1.5em * 9 * -1); }
+#toggle-aside:not(:checked) ~ aside { margin-left: calc(-100% + 1.5em * 2); }
+aside { width: calc(100% - 1.5em * 2); }
+aside > label { left: 100%; }
 aside > label::before { content: '⇥'; }
 #toggle-aside:checked ~ aside > label::before { content: '⇤'; }
 form.record-form { width: calc(100% - 1.5em); }
+form.record-form.update { width: calc(1.5em * 11); }
+.definitions, .definition, .definition > div { display: block; }
+.definitions header > div:not(:first-of-type), .definition > div:nth-of-type(1) { display: none; }
+.definitions header > div:nth-of-type(1) { width: auto; display: block; }
+.definition > div:nth-of-type(2) { padding-right: 0; }
+.definition > div:nth-of-type(2), .definition > div:nth-of-type(3) { float: left; border: none; }
+.definition > div:nth-of-type(2), .definition > div:nth-of-type(3), .definition > div:nth-of-type(4) { width: auto; }
+.definition > div:nth-of-type(4) { clear: both; padding-top: 0; padding-bottom: 1.5em; }
+.tag { margin-top: 0; margin-bottom: 0; }
 }
