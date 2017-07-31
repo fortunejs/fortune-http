@@ -175,10 +175,10 @@ aside form .submit, .submit-label, label[class^="label-"] { user-select: none; }
 
 /* responsive */
 @media (max-width: 640px) {
-#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(100% - 1.5em * 2); }
+#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(100% - 1.5em * 4); }
 #toggle-aside:checked ~ aside, #toggle-aside:not(:checked) ~ *:not(aside) { margin-left: 0; }
-#toggle-aside:not(:checked) ~ aside { margin-left: calc(-100% + 1.5em * 2); }
-aside { width: calc(100% - 1.5em * 2); }
+#toggle-aside:not(:checked) ~ aside { margin-left: calc(-100% + 1.5em * 4); }
+aside { width: calc(100% - 1.5em * 4); }
 aside > label { left: 100%; }
 aside > label::before { content: '⇥'; }
 #toggle-aside:checked ~ aside > label::before { content: '⇤'; }
