@@ -127,7 +127,7 @@ aside form .submit { font-size: calc(1em * 7 / 8); border-radius: 4px; padding: 
 .records .message + * > div { padding-top: calc(1.5em * 5 / 2 + 1px); }
 .delete-record input[type="submit"] { display: none; }
 .delete-record label { cursor: pointer; }
-form.record-form.update { position: absolute; top: auto; }
+form.record-form.update { position: absolute; top: auto; right: calc(1.5em / 2); }
 form.record-form.update::before { right: calc(1.5em - 10px); }
 label.overlay.update { z-index: 160; }
 
