@@ -39,9 +39,11 @@ label[class^="label-"] { font-size: calc(1em * (7 / 8)); border: 1px transparent
 #toggle-aside:not(:checked) ~ *:not(aside) { margin-left: calc(1.5em * 9); }
 #toggle-aside:checked ~ *:not(aside) { margin-left: 6px; }
 #toggle-aside:checked ~ aside { margin-left: calc(1.5em * 9 * -1 + 6px); }
+#toggle-aside:checked ~ aside::before { left: calc(1.5em * 9 * -1 + 6px); }
 aside ~ * { position: relative; left: 0; }
-aside, aside ~ * { transition: margin-left 0.2s ease, left 0.2s ease; }
+aside, aside::before, aside ~ * { transition: margin-left 0.2s ease, left 0.2s ease; }
 aside { width: calc(1.5em * 9); min-height: 100%; position: absolute; top: 0; left: 0; margin-left: 0; z-index: 50; }
+aside::before { height: 100%; width: calc(1.5em * 9); position: fixed; top: 0; left: 0; content: ' '; display: block; }
 aside > label { position: absolute; top: 8px; left: calc(1.5em * 9); display: block; width: calc(1.5em * 3 / 2); height: calc(1.5em * 2 - 8px * 2); border-radius: 0 4px 4px 0; padding: calc(1.5em / 2 - 8px) 0 0 calc(1.5em / 2); cursor: pointer; }
 aside > label::before { content: '⇤'; opacity: 0.5; }
 #toggle-aside:checked ~ aside > label::before { content: '⇥'; }
@@ -106,8 +108,7 @@ aside form .submit { font-size: calc(1em * 7 / 8); border-radius: 4px; padding: 
 
 /* records */
 .records-container:first-of-type .records header > div { border-bottom-color: transparent !important; }
-.records-container .table-wrapper { padding-bottom: calc(1.5em * 3 / 2); }
-.records-container:last-of-type .table-wrapper { padding-bottom: calc(1.5em * (15 + 5)); }
+.records-container .table-wrapper { padding-bottom: calc(1.5em * (15 + 5)); margin-bottom: calc(1.5em * (15 + 5 - 3 / 2) * -1); }
 .records header > div, .row > div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .records header a { margin-left: 6px; opacity: 0.5; }
 .row span, .row a { font-size: calc(1em * 7 / 8); }
@@ -141,7 +142,7 @@ input::placeholder, textarea::placeholder { opacity: 0.5; }
 body, form.record-form .inputs, form.record-form input, form.record-form input::placeholder, form.record-form textarea, form.record-form textarea::placeholder { background-color: #ffffff; color: #353837; }
 label.overlay { background-color: #36967b; opacity: 0.125; }
 form.record-form input, form.record-form textarea, form.record-form .radio-group label { background: none; border-color: rgba(0, 0, 0, 0.125); }
-aside { background-color: #f0f5f3; }
+aside, aside::before { background-color: #f0f5f3; }
 aside, aside a, aside form .submit, .submit-label { color: #757c7a; }
 aside > label, aside > header { background-color: #e8efec; }
 aside form .submit, .submit-label { background-color: #cbd6d1; color: #ffffff; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075); }
@@ -175,11 +176,11 @@ aside form .submit, .submit-label, label[class^="label-"], .records header > div
 
 /* responsive */
 @media (max-width: 640px) {
-#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(100% - 1.5em * 4); }
+#toggle-aside:checked ~ *:not(aside) { margin-left: 0; left: calc(1.5em * 9); }
 #toggle-aside:checked ~ aside, #toggle-aside:not(:checked) ~ *:not(aside) { margin-left: 0; }
-#toggle-aside:not(:checked) ~ aside { margin-left: calc(-100% + 1.5em * 4); }
-aside { width: calc(100% - 1.5em * 4); }
-aside > label { left: 100%; }
+#toggle-aside:checked ~ aside::before { left: 0; }
+#toggle-aside:not(:checked) ~ aside { margin-left: calc(1.5em * 9 * -1); }
+#toggle-aside:not(:checked) ~ aside::before { left: calc(1.5em * 9 * -1); }
 aside > label::before { content: '⇥'; }
 #toggle-aside:checked ~ aside > label::before { content: '⇤'; }
 form.record-form { width: calc(100% - 1.5em); }
