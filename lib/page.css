@@ -171,7 +171,7 @@ header.page > h1 .label-create { color: #71bca7; border-color: #71bca7; }
 header.top::after, header.page::after { content: ' '; display: block; clear: both; }
 
 /* disable select */
-aside form .submit, .submit-label, label[class^="label-"] { user-select: none; }
+aside form .submit, .submit-label, label[class^="label-"], .records header > div:first-of-type, .records header > div:last-of-type, .records header a, .value.empty, form.delete-record { user-select: none; }
 
 /* responsive */
 @media (max-width: 640px) {
