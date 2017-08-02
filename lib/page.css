@@ -139,7 +139,7 @@ label.overlay.update { z-index: 160; }
 
 /* colors */
 input::placeholder, textarea::placeholder { opacity: 0.5; }
-body, form.record-form .inputs, form.record-form input, form.record-form input::placeholder, form.record-form textarea, form.record-form textarea::placeholder { background-color: #ffffff; color: #353837; }
+body, form.record-form .inputs, form.record-form input, form.record-form input::placeholder, form.record-form textarea, form.record-form textarea::placeholder, .records-container { background-color: #ffffff; color: #353837; }
 label.overlay { background-color: #36967b; opacity: 0.125; }
 form.record-form input, form.record-form textarea, form.record-form .radio-group label { background: none; border-color: rgba(0, 0, 0, 0.125); }
 aside, aside::before { background-color: #f0f5f3; }
