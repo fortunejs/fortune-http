@@ -31,6 +31,9 @@ header.top a, .token-status { color: inherit; opacity: 0.5; }
 header.page { padding: calc(1.5em / 2); position: relative; }
 header.page > h1 { font-size: calc(1em * 5 / 4); text-transform: capitalize; }
 header.page > h1 a { color: inherit; }
+header.page > h1 a.record-type-link { text-transform: capitalize; display: inline-block; }
+header.page > h1 a.record-type-link::after { content: '/'; margin: 0 calc(1.5em / 4); opacity: 0.25; }
+header.page > h1 a.record-type-link:last-of-type::after { display: none; }
 header.page > h1 .tagline { font-size: calc(1em * (3 / 4) / (5 / 4)); font-weight: normal; text-transform: none; opacity: 0.25; margin-left: 8px; position: absolute; }
 header.page > h1 .label-create { font-size: calc(1em * (7 / 8) / (5 / 4)); font-weight: normal; float: right; z-index: 155; }
 label[class^="label-"] { font-size: calc(1em * (7 / 8)); border: 1px transparent solid; border-radius: 4px; padding: 1px 6px; margin: -2px 0; cursor: pointer; position: relative; }
@@ -148,16 +151,16 @@ aside > label, aside > header { background-color: #e8efec; }
 aside form .submit, .submit-label { background-color: #cbd6d1; color: #ffffff; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075); }
 a { color: #36967b; }
 .row .label-update, .radio-group label input:checked + span { color: #c690db; border-color: #c690db; }
-header.top, .documentation header.page, .records-container:first-of-type header.page { background-color: #fff18c; color: #dd8c5d; }
-.media-types, .media-type { background-color: #fff6bc; color: #7a9b91; }
+header.top, .documentation header.page, .records-container:first-of-type header.page { background-color: #dee8e4; color: #757c7a; }
+.media-types, .media-type { background-color: #f4edf7; }
 .records .message { background-color: #faf4fc; color: #c690db; }
 .error-message, .empty-message { background-color: #dd8c5d; color: #ffffff; }
 .media-type { background-color: rgba(255, 255, 255, 0.4); border-bottom-color: rgba(0, 0, 0, 0.125); }
-.definition-link, .definition-name { color: #8b599e; }
+.definition-link, .definition-name, .media-types, .media-type { color: #8b599e; }
 .definition, .row, .definitions header, .records header { background-color: #ffffff; }
-.records-container:first-of-type .records header { background-color: #fff6ba; color: #7a9b91; }
+.records-container:first-of-type .records header { background-color: #ede8ef; color: #7a9b91; }
 .records-container:first-of-type .records header a { color: inherit; }
-.records-container:first-of-type .records header > div:nth-of-type(2n) { background-color: #fff9d3; }
+.records-container:first-of-type .records header > div:nth-of-type(2n) { background-color: #f4edf7; }
 .definition > div, .row > div, .definitions header > div, .records header > div, form.record-form .inputs { border-color: #f4f4f2; }
 .definition:nth-of-type(2n - 1), .row:nth-of-type(2n - 1), form.record-form > div:last-of-type { background-color: #f9fcfb; }
 form.record-form::before { border-color: transparent transparent #ffffff transparent; }
