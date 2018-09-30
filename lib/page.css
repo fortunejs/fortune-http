@@ -31,7 +31,7 @@ header.top a, .token-status { color: inherit; opacity: 0.5; }
 header.page { padding: calc(1.5em / 2); position: relative; }
 header.page > h1 { font-size: calc(1em * 5 / 4); text-transform: capitalize; }
 header.page > h1 a { color: inherit; }
-header.page > h1 a.record-type-link { text-transform: capitalize; display: inline-block; }
+header.page > h1 a.record-type-link { text-transform: capitalize; display: inline-block; font-weight: 300; }
 header.page > h1 a.record-type-link::after { content: '/'; margin: 0 calc(1.5em / 4); opacity: 0.25; }
 header.page > h1 a.record-type-link:last-of-type::after { display: none; }
 header.page > h1 .tagline { font-size: calc(1em * (3 / 4) / (5 / 4)); font-weight: normal; text-transform: none; opacity: 0.25; margin-left: 8px; position: absolute; }

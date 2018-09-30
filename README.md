@@ -58,7 +58,12 @@ app.use((request, response) =>
 
 The HTML serializer has some customization options.
 
+- `prefix`: a prefix to add to *every* route. Default: `""` (empty string).
+- `indexRoute`: path to the index route. Default: `""` (empty string).
 - `injectHTML`: passing this option as a String to the HTML serializer will include it in the response.
+
+On record type field definitions:
+
 - `inputOnly`: on a record field definition, setting this property to true will mark it as an input only field. Combined with making the field non-enumerable, virtual inputs can be defined.
 - `outputOnly`: on a record field definition, setting this property to true will hide it from input.
 

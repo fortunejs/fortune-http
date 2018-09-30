@@ -6,6 +6,10 @@ const chalk = require('chalk')
 const loremIpsum = require('lorem-ipsum')
 const instance = require('fortune/test/integration/test_instance')
 const createListener = require('../lib')
+const htmlSerializer = require('../lib/html_serializer')
+const formSerializers = require('../lib/form_serializer')
+const formUrlEncodedSerializer = formSerializers.formUrlEncoded
+const formDataSerializer = formSerializers.formData
 
 const port = 1337
 
@@ -32,7 +36,13 @@ instance().then(store => {
   /*store.on(store.common.events.change, data => console.log(chalk.cyan(
     `${chalk.bold('Change')}: ${util.inspect(data, { depth: null })}`)))*/
 
-  const listener = createListener(store)
+  const listener = createListener(store, {
+    serializers: [
+      [ htmlSerializer, { indexRoute: 'index' } ],
+      formDataSerializer,
+      formUrlEncodedSerializer
+    ]
+  })
   const server = http.createServer((request, response) =>
     listener(request, response)
     .catch(error => {
