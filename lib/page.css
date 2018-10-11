@@ -146,12 +146,12 @@ body, form.record-form .inputs, form.record-form input, form.record-form input::
 label.overlay { background-color: #36967b; opacity: 0.125; }
 form.record-form input, form.record-form textarea, form.record-form .radio-group label { background: none; border-color: rgba(0, 0, 0, 0.125); }
 aside, aside::before { background-color: #f0f5f3; }
-aside, aside a, aside form .submit, .submit-label { color: #757c7a; }
-aside > label, aside > header { background-color: #e8efec; }
+aside, aside .content a, aside form .submit, .submit-label { color: #757c7a; }
+aside > label, aside > header, aside > header a { background-color: #276270; color: #ffffff; }
 aside form .submit, .submit-label { background-color: #cbd6d1; color: #ffffff; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.075); }
 a { color: #36967b; }
 .row .label-update, .radio-group label input:checked + span { color: #c690db; border-color: #c690db; }
-header.top, .documentation header.page, .records-container:first-of-type header.page { background-color: #dee8e4; color: #757c7a; }
+header.top, .documentation header.page, .records-container:first-of-type header.page { background-color: #35717f; color: #ffffff; }
 .media-types, .media-type { background-color: #f4edf7; }
 .records .message { background-color: #faf4fc; color: #c690db; }
 .error-message, .empty-message { background-color: #dd8c5d; color: #ffffff; }
