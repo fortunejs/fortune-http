@@ -17,7 +17,7 @@ instance().then(store => {
   store.options.settings.name = 'Fortune Test Web Service'
 
   /* eslint-disable max-len */
-  store.options.settings.description = '<p>This is a demo of the default HTML interface of <code>fortune-http</code>. This interface exposes most of the features of Fortune.js. Notably, it does not require JavaScript to use. Data is sent using the built-in form serializers, which are by default active along with the HTML serializer.</p><p>The default JSON serializer uses the same query parameters and URIs as this one, so one can change the accept header to <code>Accept: application/json</code> and get the same data back, in JSON format.</p>'
+  store.options.settings.description = 'This is a demo of the default HTML interface of <code>fortune-http</code>. This interface exposes most of the features of Fortune.js. Notably, it does not require JavaScript to use. Data is sent using the built-in form serializers, which are by default active along with the HTML serializer. The default JSON serializer uses the same query parameters and URIs as this one, so one can change the accept header to <code>Accept: application/json</code> and get the same data back, in JSON format.'
   /* eslint-enable max-len */
 
   store.options.documentation = {}

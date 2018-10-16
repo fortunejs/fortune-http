@@ -7,6 +7,7 @@ body, input, textarea { font-size: 16px; }
 body { line-height: 1.5em; }
 h1, h2, h3, h4, h5, h6 { font-size: 1em; }
 a { text-decoration: inherit; }
+code { font-size: calc(1em * 7 / 8); }
 input[id^="toggle-"] { display: none; }
 input[id^="toggle-"] ~ form, input[id^="toggle-"] ~ label.overlay { display: none; }
 input[id^="toggle-"]:checked ~ form, input[id^="toggle-"]:checked ~ label.overlay { display: block; }
@@ -90,8 +91,12 @@ aside form .submit { font-size: calc(1em * 7 / 8); border-radius: 4px; padding: 
 
 /* documentation, table layout */
 .documentation { padding-bottom: calc(1.5em / 2); }
-.media-types { padding: calc(1.5em / 2); padding-bottom: calc(1.5em / 2 - 1px); border-bottom: 1px transparent solid; margin-bottom: calc(1.5em / 2); }
-.media-types-title { margin-bottom: calc(1.5em / 2 / (7 / 8)); font-size: calc(1em * 7 / 8); }
+.index-tabs { padding: calc(1.5em / 2); padding-bottom: calc(1.5em / 2 - 1px); border-bottom: 1px transparent solid; margin-bottom: calc(1.5em / 2); }
+.index-tabs > div { display: none; margin: -1px calc(1.5em / -2) calc(1.5em / -2); padding: calc(1.5em / 2); border-top: 1px transparent solid; }
+.index-tabs input[type="radio"] { display: none; }
+.index-tabs label { cursor: pointer; padding: calc(1.5em / 4 / (7 / 8) - 1px) 6px; margin: 0 10px 0 -6px; border-radius: 4px 4px 0 0; font-size: calc(1em * 7 / 8); font-weight: 700; border: 1px transparent solid; display: inline-block; opacity: 0.75; }
+.index-tabs #description:checked ~ .description, .index-tabs #media-types:checked ~ .media-types { display: block; }
+.index-tabs #description:checked ~ .description-label, .index-tabs #media-types:checked ~ .media-types-label { opacity: 1; }
 .media-type { font-size: calc(1em * 3 / 4); border-radius: 4px; border: 1px transparent solid; padding: 2px 6px; margin: 3px 6px 3px 0; display: inline-block; }
 .definitions, .records { display: table; width: 100%; position: relative; }
 .definitions h4 { font-size: calc(1em * 3 / 4); text-transform: uppercase; letter-spacing: 1px; }
@@ -152,11 +157,13 @@ aside form .submit, .submit-label { background-color: #cbd6d1; color: #ffffff; b
 a { color: #36967b; }
 .row .label-update, .radio-group label input:checked + span { color: #c690db; border-color: #c690db; }
 header.top, .documentation header.page, .records-container:first-of-type header.page { background-color: #35717f; color: #ffffff; }
-.media-types, .media-type { background-color: #f4edf7; }
+.index-tabs, .index-tabs label { background-color: #f4edf7; }
+.index-tabs > div, .index-tabs label { border-color: rgba(0, 0, 0, 0.075); }
+.index-tabs #description:checked ~ .description-label, .index-tabs #media-types:checked ~ .media-types-label { border-bottom-color: transparent; }
 .records .message { background-color: #faf4fc; color: #c690db; }
 .error-message, .empty-message { background-color: #dd8c5d; color: #ffffff; }
 .media-type { background-color: rgba(255, 255, 255, 0.4); border-bottom-color: rgba(0, 0, 0, 0.125); }
-.definition-link, .definition-name, .media-types, .media-type { color: #8b599e; }
+.definition-link, .definition-name, .index-tabs, .media-type { color: #8b599e; }
 .definition, .row, .definitions header, .records header { background-color: #ffffff; }
 .records-container:first-of-type .records header { background-color: #ede8ef; color: #7a9b91; }
 .records-container:first-of-type .records header a { color: inherit; }
