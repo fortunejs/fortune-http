@@ -10,8 +10,6 @@ This is a HTTP implementation for Fortune.js, which includes default serializers
 $ npm install fortune-http --save
 ```
 
-![Screenshot](https://raw.githubusercontent.com/fortunejs/fortune-http/master/screenshot.png)
-
 
 ## Usage
 
