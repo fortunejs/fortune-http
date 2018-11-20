@@ -85,6 +85,7 @@ aside form { padding-bottom: 1.5em; }
 .input-title { font-size: calc(1em * 3 / 4); font-weight: inherit; opacity: 0.5; }
 .input-group { margin-bottom: calc(1.5em / 2); display: block; }
 .input-group input, .input-group textarea { display: block; height: calc(1.5em * 3 / 2 / (3 / 4)); background: none; border-bottom: 1px transparent solid; width: 100%; font-size: calc(1em * 3 / 4); margin-top: calc(1.5em * -1 / 4 / (3 / 4)); }
+.input-group input[type="file"] { border-bottom: 0; margin-top: 0.25em; }
 .input-group textarea { padding: calc(1.5em / 2) 0; height: calc(1.5em * 2); min-height: calc(1.5em * 2); max-height: calc(1.5em * 10); min-width: 100%; max-width: 100%; }
 aside form input[type="submit"] { display: none; }
 aside form .submit { font-size: calc(1em * 7 / 8); border-radius: 4px; padding: calc(1.5em / 3 / (7 / 8)) 0; text-align: center; font-weight: bold; display: block; width: calc(100% - 1.5em * 3 / (7 / 8)); margin: 0 calc(1.5em * 3 / 2 / (7 / 8)); cursor: pointer; }

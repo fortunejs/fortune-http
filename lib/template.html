@@ -88,7 +88,7 @@
       </h1>
       <input type="checkbox" class="toggle-create" id="toggle-create">
       <label for="toggle-create" class="overlay create"></label>
-      <form class="record-form create" method="POST">
+      <form class="record-form create" method="POST" enctype="multipart/form-data">
         <input type="hidden" class="method" name="__method__">
         <input type="hidden" class="update-id" name="id">
         <input type="hidden" class="csrf">
@@ -159,7 +159,7 @@
             <input type="checkbox" class="toggle-update">
             <label class="label-update"></label>
             <label class="overlay update"></label>
-            <form class="record-form update" method="POST">
+            <form class="record-form update" method="POST" enctype="multipart/form-data">
               <input type="hidden" class="method" name="__method__">
               <input type="hidden" class="update-id" name="id">
               <input type="hidden" class="csrf">
