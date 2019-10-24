@@ -1,7 +1,7 @@
 {
   "name": "fortune-http",
   "description": "HTTP implementation for Fortune.js.",
-  "version": "1.2.25",
+  "version": "1.2.26",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,20 +15,20 @@
     "test": "npm run lint && node test"
   },
   "dependencies": {
-    "busboy": "^0.2.14",
+    "busboy": "^0.3.1",
     "clean-css": "^4.2.1",
-    "cookie": "^0.3.1",
-    "fast-crc32c": "^1.0.4",
-    "negotiator": "^0.6.1",
-    "simulacra": "^2.1.16"
+    "cookie": "^0.4.0",
+    "fast-crc32c": "^2.0.0",
+    "negotiator": "^0.6.2",
+    "simulacra": "^2.2.0"
   },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "eslint": "^5.6.1",
+    "chalk": "^2.4.2",
+    "eslint": "^6.5.1",
     "eslint-config-boss": "^1.0.6",
-    "form-data": "^2.3.2",
-    "fortune": "^5.5.9",
-    "lorem-ipsum": "^1.0.6",
+    "form-data": "^2.5.1",
+    "fortune": "^5.5.17",
+    "lorem-ipsum": "^2.0.3",
     "tapdance": "^5.1.1"
   },
   "main": "lib/index.js",
