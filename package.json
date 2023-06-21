@@ -15,20 +15,20 @@
     "test": "npm run lint && node test"
   },
   "dependencies": {
-    "busboy": "^0.3.1",
-    "clean-css": "^4.2.1",
-    "cookie": "^0.4.0",
+    "busboy": "^1.6.0",
+    "clean-css": "^5.3.2",
+    "cookie": "^0.5.0",
     "fast-crc32c": "^2.0.0",
-    "negotiator": "^0.6.2",
+    "negotiator": "^0.6.3",
     "simulacra": "^2.2.0"
   },
   "devDependencies": {
     "chalk": "^2.4.2",
-    "eslint": "^6.5.1",
+    "eslint": "^8.43.0",
     "eslint-config-boss": "^1.0.6",
-    "form-data": "^2.5.1",
-    "fortune": "^5.5.17",
-    "lorem-ipsum": "^2.0.3",
+    "form-data": "^4.0.0",
+    "fortune": "^5.5.18",
+    "lorem-ipsum": "^2.0.8",
     "tapdance": "^5.1.1"
   },
   "main": "lib/index.js",
