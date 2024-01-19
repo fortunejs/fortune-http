@@ -15,10 +15,10 @@
     "test": "npm run lint && node test"
   },
   "dependencies": {
+    "@node-rs/crc32": "^1.9.2",
     "busboy": "^1.6.0",
     "clean-css": "^5.3.2",
     "cookie": "^0.5.0",
-    "fast-crc32c": "^2.0.0",
     "negotiator": "^0.6.3",
     "simulacra": "^2.2.0"
   },
