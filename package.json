@@ -1,11 +1,11 @@
 {
   "name": "fortune-http",
   "description": "HTTP implementation for Fortune.js.",
-  "version": "1.2.27",
+  "version": "1.2.28",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fortunejs/fortune-http.git"
+    "url": "git+ssh://git@github.com/fortunejs/fortune-http.git"
   },
   "scripts": {
     "demo": "node test/demo",
